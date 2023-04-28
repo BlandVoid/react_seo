@@ -22,6 +22,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
                 width: image_width,
                 height: image_height,
                 type: image_type,
+                alt: title,
             },
         ],
     };
