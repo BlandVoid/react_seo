@@ -8,12 +8,30 @@ const inter = Inter({ subsets: ["latin"] });
 export const generateMetadata = async (): Promise<Metadata> => {
     const title = `React SEO Website`;
     const description = "React SEO is a React app with SEO in mind.";
+    const image_url = "/cover.jpg";
+    const image_width = 1280;
+    const image_height = 720;
+    const image_type = "image/jpeg";
+
+    const og = {
+        title,
+        description,
+        images: [
+            {
+                url: image_url,
+                width: image_width,
+                height: image_height,
+                type: image_type,
+            },
+        ],
+    };
 
     //
     return {
         title: { default: title, template: `%s | ${title}` },
         description,
-        openGraph: { title, description },
+        openGraph: og,
+        twitter: og,
     };
 };
 
