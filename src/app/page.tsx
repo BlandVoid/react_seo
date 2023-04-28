@@ -1,12 +1,17 @@
 import styles from "./page.module.scss";
 
-import SocialPreviewButton from "./SocialPreviewButton";
-
 const page = async () => {
     return (
         <main className={styles.container}>
             <h1 className={styles.headline}>React SEO Website</h1>
-            <SocialPreviewButton />
+            <a
+                href={`https://socialsharepreview.com/?url=${process.env["HOST"]}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles["social-link"]}
+            >
+                Check on SocialPreview
+            </a>
         </main>
     );
 };
